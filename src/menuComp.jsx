@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import peporoniPizza from "./images/peporoni.jpg";
+import meatLoversPizza from "./images/meat.jpg";
+import veggieiPizza from "./images/veggie.jpeg";
+import californiaPizza from "./images/california.jpg";
 
 const menuItems = [
   {
@@ -11,21 +14,21 @@ const menuItems = [
   },
   {
     name: "Meat Lovers Pizza",
-    img: peporoniPizza,
+    img: meatLoversPizza,
     ingredients: ["meat", "mozzarella", "red sauce"],
     description:
       "Meat Lover's Pizza - For those who love a hearty pizza, our meat lover's pizza is the perfect choice! Loaded with savory meats, this pizza features a mouthwatering combination of juicy sausage, crispy bacon, and spicy pepperoni. Each bite is bursting with flavor, thanks to our homemade pizza sauce and a generous layer of melted mozzarella cheese. Our hand-tossed crust is crispy and golden brown, providing the perfect base for this meaty masterpiece. Whether you're feeding a hungry crowd or just looking for a satisfying meal, our meat lover's pizza is a must-try. Come and enjoy a slice today!",
   },
   {
     name: "California Pizza",
-    img: peporoniPizza,
+    img: californiaPizza,
     ingredients: ["meat", "mozzarella", "red sauce"],
     description:
       "Meat Lover's Pizza - For those who love a hearty pizza, our meat lover's pizza is the perfect choice! Loaded with savory meats, this pizza features a mouthwatering combination of juicy sausage, crispy bacon, and spicy pepperoni. Each bite is bursting with flavor, thanks to our homemade pizza sauce and a generous layer of melted mozzarella cheese. Our hand-tossed crust is crispy and golden brown, providing the perfect base for this meaty masterpiece. Whether you're feeding a hungry crowd or just looking for a satisfying meal, our meat lover's pizza is a must-try. Come and enjoy a slice today!",
   },
   {
     name: "Veggie Pizza",
-    img: peporoniPizza,
+    img: veggieiPizza,
     ingredients: ["meat", "mozzarella", "red sauce"],
     description:
       "Meat Lover's Pizza - For those who love a hearty pizza, our meat lover's pizza is the perfect choice! Loaded with savory meats, this pizza features a mouthwatering combination of juicy sausage, crispy bacon, and spicy pepperoni. Each bite is bursting with flavor, thanks to our homemade pizza sauce and a generous layer of melted mozzarella cheese. Our hand-tossed crust is crispy and golden brown, providing the perfect base for this meaty masterpiece. Whether you're feeding a hungry crowd or just looking for a satisfying meal, our meat lover's pizza is a must-try. Come and enjoy a slice today!",
@@ -39,21 +42,21 @@ const menuItems = [
   },
   {
     name: "Meat Lovers Pizza",
-    img: peporoniPizza,
+    img: meatLoversPizza,
     ingredients: ["meat", "mozzarella", "red sauce"],
     description:
       "Meat Lover's Pizza - For those who love a hearty pizza, our meat lover's pizza is the perfect choice! Loaded with savory meats, this pizza features a mouthwatering combination of juicy sausage, crispy bacon, and spicy pepperoni. Each bite is bursting with flavor, thanks to our homemade pizza sauce and a generous layer of melted mozzarella cheese. Our hand-tossed crust is crispy and golden brown, providing the perfect base for this meaty masterpiece. Whether you're feeding a hungry crowd or just looking for a satisfying meal, our meat lover's pizza is a must-try. Come and enjoy a slice today!",
   },
   {
     name: "California Pizza",
-    img: peporoniPizza,
+    img: californiaPizza,
     ingredients: ["meat", "mozzarella", "red sauce"],
     description:
       "Meat Lover's Pizza - For those who love a hearty pizza, our meat lover's pizza is the perfect choice! Loaded with savory meats, this pizza features a mouthwatering combination of juicy sausage, crispy bacon, and spicy pepperoni. Each bite is bursting with flavor, thanks to our homemade pizza sauce and a generous layer of melted mozzarella cheese. Our hand-tossed crust is crispy and golden brown, providing the perfect base for this meaty masterpiece. Whether you're feeding a hungry crowd or just looking for a satisfying meal, our meat lover's pizza is a must-try. Come and enjoy a slice today!",
   },
   {
     name: "Veggie Pizza",
-    img: peporoniPizza,
+    img: veggieiPizza,
     ingredients: ["meat", "mozzarella", "red sauce"],
     description:
       "Meat Lover's Pizza - For those who love a hearty pizza, our meat lover's pizza is the perfect choice! Loaded with savory meats, this pizza features a mouthwatering combination of juicy sausage, crispy bacon, and spicy pepperoni. Each bite is bursting with flavor, thanks to our homemade pizza sauce and a generous layer of melted mozzarella cheese. Our hand-tossed crust is crispy and golden brown, providing the perfect base for this meaty masterpiece. Whether you're feeding a hungry crowd or just looking for a satisfying meal, our meat lover's pizza is a must-try. Come and enjoy a slice today!",
@@ -67,21 +70,21 @@ const menuItems = [
   },
   {
     name: "Meat Lovers Pizza",
-    img: peporoniPizza,
+    img: meatLoversPizza,
     ingredients: ["meat", "mozzarella", "red sauce"],
     description:
       "Meat Lover's Pizza - For those who love a hearty pizza, our meat lover's pizza is the perfect choice! Loaded with savory meats, this pizza features a mouthwatering combination of juicy sausage, crispy bacon, and spicy pepperoni. Each bite is bursting with flavor, thanks to our homemade pizza sauce and a generous layer of melted mozzarella cheese. Our hand-tossed crust is crispy and golden brown, providing the perfect base for this meaty masterpiece. Whether you're feeding a hungry crowd or just looking for a satisfying meal, our meat lover's pizza is a must-try. Come and enjoy a slice today!",
   },
   {
     name: "California Pizza",
-    img: peporoniPizza,
+    img: californiaPizza,
     ingredients: ["meat", "mozzarella", "red sauce"],
     description:
       "Meat Lover's Pizza - For those who love a hearty pizza, our meat lover's pizza is the perfect choice! Loaded with savory meats, this pizza features a mouthwatering combination of juicy sausage, crispy bacon, and spicy pepperoni. Each bite is bursting with flavor, thanks to our homemade pizza sauce and a generous layer of melted mozzarella cheese. Our hand-tossed crust is crispy and golden brown, providing the perfect base for this meaty masterpiece. Whether you're feeding a hungry crowd or just looking for a satisfying meal, our meat lover's pizza is a must-try. Come and enjoy a slice today!",
   },
   {
     name: "Veggie Pizza",
-    img: peporoniPizza,
+    img: veggieiPizza,
     ingredients: ["meat", "mozzarella", "red sauce"],
     description:
       "Meat Lover's Pizza - For those who love a hearty pizza, our meat lover's pizza is the perfect choice! Loaded with savory meats, this pizza features a mouthwatering combination of juicy sausage, crispy bacon, and spicy pepperoni. Each bite is bursting with flavor, thanks to our homemade pizza sauce and a generous layer of melted mozzarella cheese. Our hand-tossed crust is crispy and golden brown, providing the perfect base for this meaty masterpiece. Whether you're feeding a hungry crowd or just looking for a satisfying meal, our meat lover's pizza is a must-try. Come and enjoy a slice today!",
@@ -108,9 +111,9 @@ export default function MenuComp() {
         flexWrap: "wrap",
         justifyContent: "center",
         alignItems: "center",
-        gap: "25px",
+        gap: "45px",
         padding: "30px",
-        backgroundColor: "rgb(94 161 93)",
+        backgroundColor: "rgb(112 178 111)",
       }}
     >
       {menuItems.map((item, index) => (
@@ -125,7 +128,6 @@ export default function MenuComp() {
             display: "flex",
             position: "relative",
             padding: "10px",
-            borderRadius: "50px",
           }}
         >
           <div
@@ -142,6 +144,7 @@ export default function MenuComp() {
               left: 0,
               right: 0,
               bottom: 0,
+              borderRadius: "25px",
             }}
           ></div>
           <div
@@ -157,12 +160,16 @@ export default function MenuComp() {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              color: "rgb(248, 153, 94)",
+              color: "rgb(231 98 15)",
+              backgroundColor: "rgb(18 71 18)",
+              borderRadius: "25px",
+              lineHeight: "1.5",
+              padding: "25px",
             }}
           >
             <h3
               className="menu-item-header"
-              style={{ fontSize: "1.75rem", padding: "5px" }}
+              style={{ fontSize: "1.75rem", padding: "5px", margin: "0" }}
             >
               {item.name}
             </h3>
