@@ -40,7 +40,7 @@ function App() {
         alignItems: "center",
         gap: "45px",
         padding: "30px",
-        backgroundColor: "rgb(167 78 31)",
+        backgroundColor: "rgb(115 76 5)",
       }}
     >
       <div
@@ -52,7 +52,9 @@ function App() {
           justifyContent: "center",
           alignItems: "center",
           // padding: "100px",
-          backgroundColor: "rgb(223 188 105)",
+          backgroundColor: "rgb(35 105 41)",
+          textAlign: "center",
+          borderRadius: "25px",
         }}
       >
         <img
@@ -60,13 +62,27 @@ function App() {
           alt="Bistro Future Render"
           style={{
             width: "100%",
+            borderRadius: "25px 25px 0 0",
           }}
         />
-        <h1>707 Cafe &amp; Bistro</h1>
-        <h2>About Us</h2>
+        <h1
+          style={{
+            color: "tan",
+          }}
+        >
+          707 Cafe &amp; Bistro
+        </h1>
+        <h2
+          style={{
+            color: "tan",
+          }}
+        >
+          About Us
+        </h2>
         <p
           style={{
             margin: "50px",
+            color: "tan",
           }}
         >
           707 Cafe &amp; Bistro is an all-day-dining venue with a peaceful and
@@ -87,7 +103,7 @@ function App() {
           alignItems: "center",
           gap: "45px",
           padding: "30px",
-          backgroundColor: "rgb(24 123 22)",
+          backgroundColor: "rgb(115 76 5)",
           borderRadius: "25px",
         }}
       >
@@ -97,13 +113,14 @@ function App() {
             width: "350px",
             fontSize: "32px",
             fontWeight: "bold",
-            color: "black",
+            color: "white",
             backgroundImage: `url(${BeachBermImg})`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             borderRadius: "25px",
             boxShadow: " 2px 4px 10px 5px rgb(9 34 11)",
+            textAlign: "center",
           }}
           onClick={handleClickBeachBermMenu}
         >
@@ -111,17 +128,21 @@ function App() {
         </div>
         <div
           style={{
+            display: "flex",
+            justifyContent: "center",
+            alignContent: "center",
             height: "200px",
             width: "350px",
             fontSize: "32px",
             fontWeight: "bold",
-            color: "black",
+            color: "white",
             backgroundImage: `url(${BistroImg})`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             borderRadius: "25px",
             boxShadow: " 2px 4px 10px 5px rgb(9 34 11)",
+            textAlign: "center",
           }}
           onClick={handleClickBistroMenu}
         >

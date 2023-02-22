@@ -109,7 +109,7 @@ export default function BistoMenuComp() {
         alignItems: "center",
         gap: "45px",
         padding: "30px",
-        backgroundColor: "rgb(24 123 22)",
+        backgroundColor: "rgb(137 127 35)",
         borderRadius: "25px",
         // opacity: "0.75",
       }}
