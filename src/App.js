@@ -12,7 +12,9 @@
 import React, { useState } from "react";
 import "./App.css";
 import BistroMenuComp from "./bistroMenuComp";
+import BistroImg from "./bistroImages/BistroRestoImg.jpg";
 import BeachBermMenu from "./beachBermMenuComp";
+import BeachBermImg from "./beachBermImages/BeachBermResto.jpg";
 
 function App() {
   const [showHome, setShowHome] = useState(false);
@@ -52,10 +54,52 @@ function App() {
       }}
     >
       {!showHome && (
-        <div>
-          <button onClick={handleClickHome}>Home</button>
-          <button onClick={handleClickBeachBermMenu}>BeachBermMenu</button>
-          <button onClick={handleClickBistroMenu}>BistroMenuComp</button>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "45px",
+            padding: "30px",
+            backgroundColor: "rgb(112 178 111)",
+          }}
+        >
+          <div
+            style={{
+              height: "200px",
+              width: "350px",
+              fontSize: "32px",
+              color: "black",
+              backgroundImage: `url(${BeachBermImg})`,
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              borderRadius: "25px",
+              boxShadow: " 2px 4px 10px 5px rgb(9 34 11)",
+            }}
+            onClick={handleClickBeachBermMenu}
+          >
+            BeachBermMenu
+          </div>
+          <div
+            style={{
+              height: "200px",
+              width: "350px",
+              fontSize: "32px",
+              color: "black",
+              backgroundImage: `url(${BistroImg})`,
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              borderRadius: "25px",
+              boxShadow: " 2px 4px 10px 5px rgb(9 34 11)",
+            }}
+            onClick={handleClickBistroMenu}
+          >
+            BistroMenuComp
+          </div>
         </div>
       )}
       {showBeachBermMenu && <BeachBermMenu />}
