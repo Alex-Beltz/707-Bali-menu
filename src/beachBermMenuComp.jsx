@@ -113,7 +113,8 @@ export default function BeachBermMenuComp() {
         alignItems: "center",
         gap: "45px",
         padding: "30px",
-        backgroundColor: "rgb(112 178 111)",
+        backgroundColor: "rgb(24 123 22)",
+        borderRadius: "25px",
       }}
     >
       {menuItems.map((item, index) => (
