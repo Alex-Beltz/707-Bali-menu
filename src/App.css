@@ -1,10 +1,47 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  padding: 30px;
+  background-color: rgb(206 200 190);
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.homeMenuBtnsCont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  padding: 30px;
+  background-color: rgb(206 200 190);
+  border-radius: 25px;
+}
+
+.homeMenuBtn {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 350px;
+  width: 550px;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 25px;
+  /* // boxShadow: " 2px 4px 10px 5px rgb(9 34 11)"; */
+  text-align: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
