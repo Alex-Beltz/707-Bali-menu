@@ -40,10 +40,10 @@ function App() {
         alignItems: "center",
         gap: "45px",
         padding: "30px",
-        backgroundColor: "rgb(115 76 5)",
+        backgroundColor: "rgb(206 200 190)",
       }}
     >
-      <div
+      {/* <div
         className="header"
         style={{
           display: "flex",
@@ -92,7 +92,7 @@ function App() {
           with minimalist design and inviting vibes. 707's combination of local
           and western eats in a cozy setting makes for a true Bali experience.
         </p>
-      </div>
+      </div> */}
       <div
         className="menu-buttons"
         style={{
@@ -103,14 +103,17 @@ function App() {
           alignItems: "center",
           gap: "45px",
           padding: "30px",
-          backgroundColor: "rgb(115 76 5)",
+          backgroundColor: "rgb(206 200 190)",
           borderRadius: "25px",
         }}
       >
         <div
           style={{
-            height: "200px",
-            width: "350px",
+            display: "flex",
+            justifyContent: "center",
+            alignContent: "center",
+            height: "350px",
+            width: "550px",
             fontSize: "32px",
             fontWeight: "bold",
             color: "white",
@@ -119,20 +122,20 @@ function App() {
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             borderRadius: "25px",
-            boxShadow: " 2px 4px 10px 5px rgb(9 34 11)",
+            // boxShadow: " 2px 4px 10px 5px rgb(9 34 11)",
             textAlign: "center",
           }}
           onClick={handleClickBeachBermMenu}
         >
-          Beach Berm Menu
+          Beach Berm
         </div>
         <div
           style={{
             display: "flex",
             justifyContent: "center",
             alignContent: "center",
-            height: "200px",
-            width: "350px",
+            height: "350px",
+            width: "550px",
             fontSize: "32px",
             fontWeight: "bold",
             color: "white",
@@ -141,12 +144,12 @@ function App() {
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             borderRadius: "25px",
-            boxShadow: " 2px 4px 10px 5px rgb(9 34 11)",
+            // boxShadow: " 0px 1px 3px 2px rgb(9 34 11)",
             textAlign: "center",
           }}
           onClick={handleClickBistroMenu}
         >
-          Bistro Menu
+          Bistro
         </div>
       </div>
       {showBeachBermMenu && <BeachBermMenu />}
