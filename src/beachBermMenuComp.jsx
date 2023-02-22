@@ -1,97 +1,97 @@
 import React, { useState } from "react";
-import peporoniPizza from "./images/peporoni.jpg";
-import meatLoversPizza from "./images/meat.jpg";
-import veggieiPizza from "./images/veggie.jpeg";
-import californiaPizza from "./images/california.jpg";
+import burger from "./beachBermImages/Burger.jpg";
+import chickenWings from "./beachBermImages/ChickenWings.jpg";
+import salmon from "./beachBermImages/Salmon.jpg";
+import waffleEggs from "./beachBermImages/Waffle&Eggs.jpg";
 
 const menuItems = [
   {
-    name: "Peperoni Pizza",
-    img: peporoniPizza,
+    name: "Burger",
+    img: burger,
     ingredients: ["peperoni", "mozzarella", "red sauce"],
     description:
       "Pepperoni Pizza - Our classic pepperoni pizza is a fan favorite! Made with our signature homemade pizza sauce, melted mozzarella cheese, and delicious pepperoni slices, this pizza is sure to satisfy any craving. Our hand-tossed crust is crispy on the outside, chewy on the inside, and perfectly complements the rich, savory flavors of the toppings. Whether you're dining in or taking out, our pepperoni pizza is a great choice for any occasion. So come on in and try one today!",
   },
   {
-    name: "Meat Lovers Pizza",
-    img: meatLoversPizza,
+    name: "Chicken Wings",
+    img: chickenWings,
     ingredients: ["meat", "mozzarella", "red sauce"],
     description:
       "Meat Lover's Pizza - For those who love a hearty pizza, our meat lover's pizza is the perfect choice! Loaded with savory meats, this pizza features a mouthwatering combination of juicy sausage, crispy bacon, and spicy pepperoni. Each bite is bursting with flavor, thanks to our homemade pizza sauce and a generous layer of melted mozzarella cheese. Our hand-tossed crust is crispy and golden brown, providing the perfect base for this meaty masterpiece. Whether you're feeding a hungry crowd or just looking for a satisfying meal, our meat lover's pizza is a must-try. Come and enjoy a slice today!",
   },
   {
-    name: "California Pizza",
-    img: californiaPizza,
+    name: "Salmon",
+    img: salmon,
     ingredients: ["meat", "mozzarella", "red sauce"],
     description:
       "Meat Lover's Pizza - For those who love a hearty pizza, our meat lover's pizza is the perfect choice! Loaded with savory meats, this pizza features a mouthwatering combination of juicy sausage, crispy bacon, and spicy pepperoni. Each bite is bursting with flavor, thanks to our homemade pizza sauce and a generous layer of melted mozzarella cheese. Our hand-tossed crust is crispy and golden brown, providing the perfect base for this meaty masterpiece. Whether you're feeding a hungry crowd or just looking for a satisfying meal, our meat lover's pizza is a must-try. Come and enjoy a slice today!",
   },
   {
-    name: "Veggie Pizza",
-    img: veggieiPizza,
+    name: "Waffle & Eggs",
+    img: waffleEggs,
     ingredients: ["meat", "mozzarella", "red sauce"],
     description:
       "Meat Lover's Pizza - For those who love a hearty pizza, our meat lover's pizza is the perfect choice! Loaded with savory meats, this pizza features a mouthwatering combination of juicy sausage, crispy bacon, and spicy pepperoni. Each bite is bursting with flavor, thanks to our homemade pizza sauce and a generous layer of melted mozzarella cheese. Our hand-tossed crust is crispy and golden brown, providing the perfect base for this meaty masterpiece. Whether you're feeding a hungry crowd or just looking for a satisfying meal, our meat lover's pizza is a must-try. Come and enjoy a slice today!",
   },
   {
-    name: "Peperoni Pizza",
-    img: peporoniPizza,
+    name: "Burger",
+    img: burger,
     ingredients: ["peperoni", "mozzarella", "red sauce"],
     description:
       "Pepperoni Pizza - Our classic pepperoni pizza is a fan favorite! Made with our signature homemade pizza sauce, melted mozzarella cheese, and delicious pepperoni slices, this pizza is sure to satisfy any craving. Our hand-tossed crust is crispy on the outside, chewy on the inside, and perfectly complements the rich, savory flavors of the toppings. Whether you're dining in or taking out, our pepperoni pizza is a great choice for any occasion. So come on in and try one today!",
   },
   {
-    name: "Meat Lovers Pizza",
-    img: meatLoversPizza,
+    name: "Chicken Wings",
+    img: chickenWings,
     ingredients: ["meat", "mozzarella", "red sauce"],
     description:
       "Meat Lover's Pizza - For those who love a hearty pizza, our meat lover's pizza is the perfect choice! Loaded with savory meats, this pizza features a mouthwatering combination of juicy sausage, crispy bacon, and spicy pepperoni. Each bite is bursting with flavor, thanks to our homemade pizza sauce and a generous layer of melted mozzarella cheese. Our hand-tossed crust is crispy and golden brown, providing the perfect base for this meaty masterpiece. Whether you're feeding a hungry crowd or just looking for a satisfying meal, our meat lover's pizza is a must-try. Come and enjoy a slice today!",
   },
   {
-    name: "California Pizza",
-    img: californiaPizza,
+    name: "Salmon",
+    img: salmon,
     ingredients: ["meat", "mozzarella", "red sauce"],
     description:
       "Meat Lover's Pizza - For those who love a hearty pizza, our meat lover's pizza is the perfect choice! Loaded with savory meats, this pizza features a mouthwatering combination of juicy sausage, crispy bacon, and spicy pepperoni. Each bite is bursting with flavor, thanks to our homemade pizza sauce and a generous layer of melted mozzarella cheese. Our hand-tossed crust is crispy and golden brown, providing the perfect base for this meaty masterpiece. Whether you're feeding a hungry crowd or just looking for a satisfying meal, our meat lover's pizza is a must-try. Come and enjoy a slice today!",
   },
   {
-    name: "Veggie Pizza",
-    img: veggieiPizza,
+    name: "Waffle & Eggs",
+    img: waffleEggs,
     ingredients: ["meat", "mozzarella", "red sauce"],
     description:
       "Meat Lover's Pizza - For those who love a hearty pizza, our meat lover's pizza is the perfect choice! Loaded with savory meats, this pizza features a mouthwatering combination of juicy sausage, crispy bacon, and spicy pepperoni. Each bite is bursting with flavor, thanks to our homemade pizza sauce and a generous layer of melted mozzarella cheese. Our hand-tossed crust is crispy and golden brown, providing the perfect base for this meaty masterpiece. Whether you're feeding a hungry crowd or just looking for a satisfying meal, our meat lover's pizza is a must-try. Come and enjoy a slice today!",
   },
   {
-    name: "Peperoni Pizza",
-    img: peporoniPizza,
+    name: "Burger",
+    img: burger,
     ingredients: ["peperoni", "mozzarella", "red sauce"],
     description:
       "Pepperoni Pizza - Our classic pepperoni pizza is a fan favorite! Made with our signature homemade pizza sauce, melted mozzarella cheese, and delicious pepperoni slices, this pizza is sure to satisfy any craving. Our hand-tossed crust is crispy on the outside, chewy on the inside, and perfectly complements the rich, savory flavors of the toppings. Whether you're dining in or taking out, our pepperoni pizza is a great choice for any occasion. So come on in and try one today!",
   },
   {
-    name: "Meat Lovers Pizza",
-    img: meatLoversPizza,
+    name: "Chicken Wings",
+    img: chickenWings,
     ingredients: ["meat", "mozzarella", "red sauce"],
     description:
       "Meat Lover's Pizza - For those who love a hearty pizza, our meat lover's pizza is the perfect choice! Loaded with savory meats, this pizza features a mouthwatering combination of juicy sausage, crispy bacon, and spicy pepperoni. Each bite is bursting with flavor, thanks to our homemade pizza sauce and a generous layer of melted mozzarella cheese. Our hand-tossed crust is crispy and golden brown, providing the perfect base for this meaty masterpiece. Whether you're feeding a hungry crowd or just looking for a satisfying meal, our meat lover's pizza is a must-try. Come and enjoy a slice today!",
   },
   {
-    name: "California Pizza",
-    img: californiaPizza,
+    name: "Salmon",
+    img: salmon,
     ingredients: ["meat", "mozzarella", "red sauce"],
     description:
       "Meat Lover's Pizza - For those who love a hearty pizza, our meat lover's pizza is the perfect choice! Loaded with savory meats, this pizza features a mouthwatering combination of juicy sausage, crispy bacon, and spicy pepperoni. Each bite is bursting with flavor, thanks to our homemade pizza sauce and a generous layer of melted mozzarella cheese. Our hand-tossed crust is crispy and golden brown, providing the perfect base for this meaty masterpiece. Whether you're feeding a hungry crowd or just looking for a satisfying meal, our meat lover's pizza is a must-try. Come and enjoy a slice today!",
   },
   {
-    name: "Veggie Pizza",
-    img: veggieiPizza,
+    name: "Waffle & Eggs",
+    img: waffleEggs,
     ingredients: ["meat", "mozzarella", "red sauce"],
     description:
       "Meat Lover's Pizza - For those who love a hearty pizza, our meat lover's pizza is the perfect choice! Loaded with savory meats, this pizza features a mouthwatering combination of juicy sausage, crispy bacon, and spicy pepperoni. Each bite is bursting with flavor, thanks to our homemade pizza sauce and a generous layer of melted mozzarella cheese. Our hand-tossed crust is crispy and golden brown, providing the perfect base for this meaty masterpiece. Whether you're feeding a hungry crowd or just looking for a satisfying meal, our meat lover's pizza is a must-try. Come and enjoy a slice today!",
   },
 ];
 
-export default function BistoMenuComp() {
+export default function BeachBermMenuComp() {
   const [hoveredItem, setHoveredItem] = useState(null);
 
   const handleMouseEnter = (item) => {

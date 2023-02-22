@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import peporoniPizza from "./images/peporoni.jpg";
-import meatLoversPizza from "./images/meat.jpg";
-import veggieiPizza from "./images/veggie.jpeg";
-import californiaPizza from "./images/california.jpg";
+import peporoniPizza from "./bistroImages/peporoni.jpg";
+import meatLoversPizza from "./bistroImages/meat.jpg";
+import veggieiPizza from "./bistroImages/veggie.jpeg";
+import californiaPizza from "./bistroImages/california.jpg";
 
 const menuItems = [
   {
