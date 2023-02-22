@@ -91,7 +91,7 @@ const menuItems = [
   },
 ];
 
-export default function MenuComp() {
+export default function BistoMenuComp() {
   const [hoveredItem, setHoveredItem] = useState(null);
 
   const handleMouseEnter = (item) => {
@@ -124,7 +124,7 @@ export default function MenuComp() {
           onMouseLeave={() => handleMouseLeave()}
           style={{
             height: "400px",
-            width: "300px",
+            width: "400px",
             display: "flex",
             position: "relative",
             padding: "10px",
@@ -150,7 +150,7 @@ export default function MenuComp() {
           <div
             className="menu-item-text"
             style={{
-              opacity: hoveredItem === item ? 1 : 0,
+              opacity: hoveredItem === item ? 0.65 : 0,
               position: "absolute",
               top: 0,
               left: 0,
@@ -160,11 +160,16 @@ export default function MenuComp() {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              color: "rgb(231 98 15)",
-              backgroundColor: "rgb(18 71 18)",
+              color: "rgb(196 62 3)",
+              backgroundColor: "rgb(2 21 2)",
+              border: "2px ridge rgba(24,101,33,0.6)",
+              // borderRadius: "20px 40px 20px 40px",
               borderRadius: "25px",
               lineHeight: "1.5",
               padding: "25px",
+              boxShadow: " 2px 4px 10px 5px rgb(9 34 11)",
+              outline: "none",
+              fontFamily: "'Comic Sans MS', cursive, sans-serif",
             }}
           >
             <h3
@@ -175,7 +180,12 @@ export default function MenuComp() {
             </h3>
             <p
               className="menu-item-description"
-              style={{ fontSize: "0.75rem", padding: "10px" }}
+              style={{
+                fontSize: "0.75rem",
+                padding: "10px",
+                fontWeight: "bold",
+                wordSpacing: "0.6px",
+              }}
             >
               {item.description}
             </p>
