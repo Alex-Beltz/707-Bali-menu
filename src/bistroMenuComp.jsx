@@ -92,14 +92,10 @@ const menuItems = [
 ];
 
 export default function BistoMenuComp() {
-  const [hoveredItem, setHoveredItem] = useState(null);
+  const [activeItem, setActiveItem] = useState(null);
 
-  const handleMouseEnter = (item) => {
-    setHoveredItem(item);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredItem(null);
+  const handleInfoClick = (item) => {
+    setActiveItem(item === activeItem ? null : item);
   };
 
   return (
@@ -113,15 +109,15 @@ export default function BistoMenuComp() {
         alignItems: "center",
         gap: "45px",
         padding: "30px",
-        backgroundColor: "rgb(112 178 111)",
+        backgroundColor: "rgb(24 123 22)",
+        borderRadius: "25px",
+        // opacity: "0.75",
       }}
     >
       {menuItems.map((item, index) => (
         <div
           key={index}
           className="menu-item"
-          onMouseEnter={() => handleMouseEnter(item)}
-          onMouseLeave={() => handleMouseLeave()}
           style={{
             height: "400px",
             width: "400px",
@@ -130,13 +126,33 @@ export default function BistoMenuComp() {
             padding: "10px",
           }}
         >
+          <button
+            className="menu-item-info"
+            onClick={() => handleInfoClick(item)}
+            style={{
+              padding: "10px",
+              backgroundColor: "rgb(112 178 111)",
+              color: "white",
+              fontSize: "20px",
+              zIndex: "100",
+              height: "50px",
+              width: "50px",
+              borderRadius: "15px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              opacity: "0.75",
+            }}
+          >
+            info
+          </button>
           <div
             className="menu-item-image"
             style={{
               backgroundImage: `url(${item.img})`,
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
-              opacity: hoveredItem === item ? 0.25 : 1,
+              opacity: activeItem === item ? 0.25 : 1,
               height: "100%",
               width: "100%",
               position: "absolute",
@@ -145,12 +161,13 @@ export default function BistoMenuComp() {
               right: 0,
               bottom: 0,
               borderRadius: "25px",
+              boxShadow: " 1px 2px 5px 3px rgb(9 34 11)",
             }}
           ></div>
           <div
             className="menu-item-text"
             style={{
-              opacity: hoveredItem === item ? 0.65 : 0,
+              opacity: activeItem === item ? 0.65 : 0,
               position: "absolute",
               top: 0,
               left: 0,
@@ -163,7 +180,6 @@ export default function BistoMenuComp() {
               color: "rgb(196 62 3)",
               backgroundColor: "rgb(2 21 2)",
               border: "2px ridge rgba(24,101,33,0.6)",
-              // borderRadius: "20px 40px 20px 40px",
               borderRadius: "25px",
               lineHeight: "1.5",
               padding: "25px",
