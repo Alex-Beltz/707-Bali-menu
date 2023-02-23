@@ -1,14 +1,37 @@
 import React from "react";
+import GoJekLogo from "./logos/Gojek-logo.png";
+import GrabLogo from "./logos/Grab-logo.png";
 
-const beachBermDeliveryLinks = {
-  GoJekLink: "",
-  GrabLink: "",
-};
-const bistroDeliveryLinks = {
-  GoJekLink: "",
-  GrabLink: "",
-};
+export default function DeliveryServices({ deliveryLinks }) {
+  // const handleClickLink = (link) => {
+  //   window.location.href = link;
+  // };
 
-export default function deliveryServices() {
-  return <div>deliveryServices</div>;
+  const handleClickLink = (link) => {
+    window.open(link, "_blank");
+  };
+
+  return (
+    <div
+      style={{
+        backgroundColor: "tan",
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      <img
+        src={GoJekLogo}
+        alt="GoJek"
+        style={{ height: "130px", width: "200px", margin: "50px" }}
+        onClick={() => handleClickLink(deliveryLinks.GoJekLink)}
+      />
+      <img
+        src={GrabLogo}
+        alt="Grab"
+        style={{ height: "130px", width: "200px", margin: "50px" }}
+        onClick={() => handleClickLink(deliveryLinks.GrabLink)}
+      />
+    </div>
+  );
 }
