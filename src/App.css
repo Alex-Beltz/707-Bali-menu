@@ -1,107 +1,22 @@
-/* .App {
-  text-align: center;
+*/ .App {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-color: rgb(206 200 190);
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.homeMenuBtnsCont {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 45px;
-  padding: 30px;
-  background-color: rgb(206 200 190);
-   border-radius: 25px; 
-}
-
-.homeMenuBtn {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  height: 350px;
-  width: 550px;
-   width: 300px; for media queries
-  font-size: 32px;
-  font-weight: bold;
-  color: white;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 25px;
-   boxShadow: " 2px 4px 10px 5px rgb(9 34 11)"; 
   text-align: center;
-  position: relative;
 }
 
-.homeMenuBtnOverlay {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  font-size: 32px;
-  font-weight: bold;
-  color: white;
-  background-color: black;
-  opacity: 0.75;
-  border-radius: 25px;
-}
-
-.homeMenuBtn:hover .homeMenuBtnOverlay {
-  opacity: 0.35;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.appHeader {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-.App {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(206 200 190);
   text-align: center;
+}
+
+.appHeader h1 {
+  color: rgb(202 100 44);
+  font-size: 3.5rem;
 }
 
 .homeMenuBtnsCont {
@@ -111,7 +26,7 @@
   align-items: center;
   gap: 45px;
   padding: 30px;
-  background-color: rgb(206 200 190);
+  background-color: rgb(185 149 87);
 }
 
 .homeMenuBtn {
@@ -150,22 +65,39 @@
 
 .homeMenuBtn:hover .homeMenuBtnOverlay {
   opacity: 0.35;
+}
+
+.deliveryServicesCont {
+  background-color: #9db594;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.deliveryServicesLink {
+  height: 130px;
+  width: 200px;
+  margin: 50px auto;
 }
 
 .locationDetailsCont {
-  background-color: #83804d;
-  width: 100%;
+  background-color: #7d4800;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 65px;
 }
 
 .locationMapCont {
   height: 350px;
   width: 400px;
-  /* margin-right: 20px; */
+}
+
+.locationMapCont a {
+  border: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
 }
 
 .locationMapCont iframe {
@@ -180,6 +112,19 @@
   padding: 50px;
 }
 
+.locationDetailsAddress {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.locationDetailsAddress h3 {
+  width: 75%;
+  color: #c2a572;
+}
+
 .locationDetailsContact {
   display: flex;
   flex-direction: row;
@@ -190,14 +135,15 @@
 .locationDetailsContact a {
   display: flex;
   justify-content: center;
+  width: 40%;
 }
 
 .locationDetailsContact a img {
   height: 150px;
-  width: 100%;
+  width: 55%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .homeMenuBtn {
     width: 350px;
   }
@@ -215,37 +161,7 @@
     flex-direction: column;
   }
 
-  /* .locationDetailsContact a {
-    align-content: center;
-  } */
-}
-
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .locationDetailsAdress {
+    font-size: 1rem;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
