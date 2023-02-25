@@ -40,13 +40,8 @@ export default function MenuCarousel({ menuItems, handleMenuItemClick }) {
             <img
               src={menuItems[selectedMenuItem].menuImg}
               alt={menuItems[selectedMenuItem].name}
-              style={{ width: "500px", height: "700px", zIndex: "100" }}
             />
-            <button
-              className="back-button"
-              style={{ zIndex: "100" }}
-              onClick={handleBackButtonClick}
-            >
+            <button className="back-button" onClick={handleBackButtonClick}>
               Back
             </button>
           </div>
