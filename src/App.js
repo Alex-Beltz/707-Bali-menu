@@ -1,114 +1,94 @@
-// import React, { useState } from "react";
-// import "./App.css";
-// import BistroImg from "./bistroImages/BistroRestoImg.jpg";
-// import BeachBermImg from "./beachBermImages/BeachBermResto.jpg";
-// import MenuCarousel from "./menuCarousel";
-// import DeliveryServices from "./deliveryServices.jsx";
-// import { beachBermMenus, bistroMenus } from "./menuCarousel.jsx";
-// import menus from "./menuCarousel.jsx";
-
-// const deliveryLinks = {
-//   beachBerm: {
-//     GoJekLink: "https://www.gojek.com/en-id/",
-//     GrabLink: "https://codepen.io/features/",
-//   },
-//   bistro: {
-//     GoJekLink: "https://www.gojek.com/en-id/",
-//     GrabLink: "https://www.youtube.com/",
-//   },
-// };
-
-// const menuTypes = {
-//   beachBerm: menus.beachBerm,
-//   bistro: menus.bistro,
-// };
-
-// export default function App() {
-//   const [showMenuCarousel, setShowMenuCarousel] = useState(false);
-//   // const [menuItems, setMenuItems] = useState([]);
-//   const [selectedMenuType, setSelectedMenuType] = useState(null);
-
-//   const handleClickHomeMenuBtn = (menuType) => {
-//     if (menuType === "beachBerm") {
-//       setMenuItems(beachBermMenus);
-//     } else if (menuType === "bistro") {
-//       setMenuItems(bistroMenus);
-//     }
-//     setSelectedMenuType(menuType);
-//     setShowMenuCarousel(true);
-//   };
-//   // const handleClickHomeMenuBtn = (menuType) => {
-//   //   setSelectedMenuType(menuType);
-//   //   setShowMenuCarousel(true);
-//   // };
-
-//   return (
-//     <div className="App">
-//       <div className="homeMenuBtnsCont">
-//         <div
-//           className="homeMenuBtn"
-//           style={{
-//             backgroundImage: `url(${BeachBermImg})`,
-//           }}
-//           onClick={() => handleClickHomeMenuBtn("beachBerm")}
-//         >
-//           <div className="homeMenuBtnOverlay">Beach Berm</div>
-//         </div>
-//         <div
-//           className="homeMenuBtn"
-//           style={{
-//             backgroundImage: `url(${BistroImg})`,
-//           }}
-//           onClick={() => handleClickHomeMenuBtn("bistro")}
-//         >
-//           <div className="homeMenuBtnOverlay">Bistro</div>
-//         </div>
-//       </div>
-//       {/* {showMenuCarousel && (
-//         <MenuCarousel menuItems={menuTypes[selectedMenuType]} />
-//       )}
-//       {selectedMenuType && (
-//         <DeliveryServices deliveryLinks={deliveryLinks[selectedMenuType]} />
-//       )} */}
-//       {showMenuCarousel && <MenuCarousel menuType={menuItems} />}
-//       {selectedMenuType && (
-//         <DeliveryServices deliveryLinks={deliveryLinks[selectedMenuType]} />
-//       )}
-//     </div>
-//   );
-// }
-
 import React, { useState } from "react";
 import "./App.css";
 import BistroImg from "./bistroImages/BistroRestoImg.jpg";
 import BeachBermImg from "./beachBermImages/BeachBermResto.jpg";
 import MenuCarousel from "./menuCarousel";
 import DeliveryServices from "./deliveryServices.jsx";
-import { beachBermMenus, bistroMenus } from "./menuCarousel.jsx";
+import LocationDetails from "./locationDetails.jsx";
 
 const beachBermDeliveryLinks = {
   GoJekLink: "https://www.gojek.com/en-id/",
   GrabLink: "https://codepen.io/features/",
 };
 const bistroDeliveryLinks = {
-  GoJekLink: "https://www.gojek.com/en-id/",
+  GoJekLink: "https://nodejs.org/en/",
   GrabLink: "https://www.youtube.com/",
+};
+
+const beachBermMenus = [
+  {
+    name: "Indonesian",
+    menuImg: require("./Menus/beachBermIndo.jpg"),
+  },
+  {
+    name: "Western",
+    menuImg: require("./Menus/beachBermWestern.jpg"),
+  },
+  {
+    name: "Drinks",
+    menuImg: require("./Menus/beachBermDrinks.jpg"),
+  },
+  {
+    name: "Bites",
+    menuImg: require("./Menus/beachBermBites.jpg"),
+  },
+];
+
+const bistroMenus = [
+  {
+    name: "Indonesian",
+    menuImg: require("./Menus/bistroIndo.jpg"),
+  },
+  {
+    name: "Western",
+    menuImg: require("./Menus/bistroWestern.jpg"),
+  },
+  {
+    name: "Drinks",
+    menuImg: require("./Menus/bistroDrinks.jpg"),
+  },
+  {
+    name: "Bites",
+    menuImg: require("./Menus/bistroBites.jpg"),
+  },
+];
+
+const beachBermDetails = {
+  GMapsLink: "https://goo.gl/maps/FrnXECszCnFUL5Ja8",
+  address:
+    "Jl. Batu Belig No.33 A, Kerobokan Kelod, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+  phone: "+628123981356",
+  InstagramLink: "https://www.instagram.com/",
+};
+const bistroDetails = {
+  GMapsLink: "https://goo.gl/maps/MmsXKNQ5UPaPzwQL7",
+  address:
+    "Jl. Cendrawasih Jl. Petitenget No.77, Kerobokan Kelod, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+  phone: "+628123981356",
+  InstagramLink: "https://www.instagram.com/",
 };
 
 export default function App() {
   const [showMenuCarousel, setShowMenuCarousel] = useState(false);
   const [menuItems, setMenuItems] = useState([]);
   const [deliveryLinks, setDeliveryLinks] = useState(null);
+  const [locationDetails, setLocationDetails] = useState(null);
 
   const handleClickHomeMenuBtn = (menuType) => {
     if (menuType === "beachBerm") {
       setMenuItems(beachBermMenus);
       setDeliveryLinks(beachBermDeliveryLinks);
+      setLocationDetails(beachBermDetails);
     } else if (menuType === "bistro") {
       setMenuItems(bistroMenus);
       setDeliveryLinks(bistroDeliveryLinks);
+      setLocationDetails(bistroDetails);
     }
     setShowMenuCarousel(true);
+  };
+
+  const handleMenuItemClick = (index) => {
+    console.log("Selected menu item:", menuItems[index]);
   };
 
   return (
@@ -133,8 +113,14 @@ export default function App() {
           <div className="homeMenuBtnOverlay">Bistro</div>
         </div>
       </div>
-      {showMenuCarousel && <MenuCarousel menuType={menuItems} />}
+      {showMenuCarousel && (
+        <MenuCarousel
+          menuItems={menuItems}
+          handleMenuItemClick={handleMenuItemClick}
+        />
+      )}
       {deliveryLinks && <DeliveryServices deliveryLinks={deliveryLinks} />}
+      {locationDetails && <LocationDetails locationDetails={locationDetails} />}
     </div>
   );
 }
