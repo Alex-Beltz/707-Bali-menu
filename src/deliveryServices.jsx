@@ -3,10 +3,6 @@ import GoJekLogo from "./logos/Gojek-logo.png";
 import GrabLogo from "./logos/Grab-logo.png";
 
 export default function DeliveryServices({ deliveryLinks }) {
-  // const handleClickLink = (link) => {
-  //   window.location.href = link;
-  // };
-
   const handleClickLink = (link) => {
     window.open(link, "_blank");
   };
