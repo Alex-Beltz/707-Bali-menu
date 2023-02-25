@@ -10,32 +10,19 @@ export default function LocationDetails({ locationDetails }) {
           <iframe
             title="location-map"
             src={`https://www.google.com/maps/embed/v1/place?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&q=${locationDetails.address}&zoom=15`}
-            // style={{
-            //   border: 0,
-            //   height: "100%",
-            //   width: "100%",
-            //   borderRadius: "25px",
-            // }}
           ></iframe>
         </a>
       </div>
-      <div
-        className="locationDetailsInfo"
-        // style={{ flex: 1 }}
-      >
-        <div style={{ fontSize: "24px", marginBottom: "50px" }}>
-          {locationDetails.address}
+      <div className="locationDetailsInfo">
+        <div className="locationDetailsAddress">
+          <h3>{locationDetails.address}</h3>
         </div>
         <div className="locationDetailsContact">
           <a href={`tel:${locationDetails.phone}`}>
             <img src={WAlogo} alt="WhatsApp logo" />
           </a>
           <a href={locationDetails.InstagramLink}>
-            <img
-              src={InstagramLogo}
-              alt="Instagram logo"
-              // style={{ height: "120px", width: "150px" }}
-            />
+            <img src={InstagramLogo} alt="Instagram logo" />
           </a>
         </div>
       </div>
