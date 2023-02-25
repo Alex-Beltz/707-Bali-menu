@@ -1,12 +1,10 @@
-.App {
+/* .App {
   text-align: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  /* gap: 45px; */
-  /* padding: 30px; */
   background-color: rgb(206 200 190);
 }
 
@@ -24,7 +22,7 @@
   gap: 45px;
   padding: 30px;
   background-color: rgb(206 200 190);
-  border-radius: 25px;
+   border-radius: 25px; 
 }
 
 .homeMenuBtn {
@@ -33,6 +31,7 @@
   align-content: center;
   height: 350px;
   width: 550px;
+   width: 300px; for media queries
   font-size: 32px;
   font-weight: bold;
   color: white;
@@ -40,7 +39,7 @@
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 25px;
-  /* // boxShadow: " 2px 4px 10px 5px rgb(9 34 11)"; */
+   boxShadow: " 2px 4px 10px 5px rgb(9 34 11)"; 
   text-align: center;
   position: relative;
 }
@@ -94,4 +93,159 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(206 200 190);
+  text-align: center;
 }
+
+.homeMenuBtnsCont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  padding: 30px;
+  background-color: rgb(206 200 190);
+}
+
+.homeMenuBtn {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 350px;
+  width: 550px;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 25px;
+  text-align: center;
+  position: relative;
+}
+
+.homeMenuBtnOverlay {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  opacity: 0.75;
+  border-radius: 25px;
+}
+
+.homeMenuBtn:hover .homeMenuBtnOverlay {
+  opacity: 0.35;
+}
+
+.locationDetailsCont {
+  background-color: #83804d;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.locationMapCont {
+  height: 350px;
+  width: 400px;
+  /* margin-right: 20px; */
+}
+
+.locationMapCont iframe {
+  border: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+}
+
+.locationDetailsInfo {
+  flex: 1;
+  padding: 50px;
+}
+
+.locationDetailsContact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+
+.locationDetailsContact a {
+  display: flex;
+  justify-content: center;
+}
+
+.locationDetailsContact a img {
+  height: 150px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .homeMenuBtn {
+    width: 350px;
+  }
+  .locationDetailsCont {
+    flex-direction: column;
+  }
+
+  .locationMapCont {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 50px;
+  }
+
+  .locationDetailsContact {
+    flex-direction: column;
+  }
+
+  /* .locationDetailsContact a {
+    align-content: center;
+  } */
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
