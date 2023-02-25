@@ -93,24 +93,28 @@ export default function App() {
 
   return (
     <div className="App">
-      <div className="homeMenuBtnsCont">
-        <div
-          className="homeMenuBtn"
-          style={{
-            backgroundImage: `url(${BeachBermImg})`,
-          }}
-          onClick={() => handleClickHomeMenuBtn("beachBerm")}
-        >
-          <div className="homeMenuBtnOverlay">Beach Berm</div>
-        </div>
-        <div
-          className="homeMenuBtn"
-          style={{
-            backgroundImage: `url(${BistroImg})`,
-          }}
-          onClick={() => handleClickHomeMenuBtn("bistro")}
-        >
-          <div className="homeMenuBtnOverlay">Bistro</div>
+      <div className="appHeader">
+        <h1>707 Restaurant Group</h1>
+
+        <div className="homeMenuBtnsCont">
+          <div
+            className="homeMenuBtn"
+            style={{
+              backgroundImage: `url(${BeachBermImg})`,
+            }}
+            onClick={() => handleClickHomeMenuBtn("beachBerm")}
+          >
+            <div className="homeMenuBtnOverlay">Beach Berm</div>
+          </div>
+          <div
+            className="homeMenuBtn"
+            style={{
+              backgroundImage: `url(${BistroImg})`,
+            }}
+            onClick={() => handleClickHomeMenuBtn("bistro")}
+          >
+            <div className="homeMenuBtnOverlay">Bistro</div>
+          </div>
         </div>
       </div>
       {showMenuCarousel && (
