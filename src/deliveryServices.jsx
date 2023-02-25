@@ -17,19 +17,19 @@ export default function DeliveryServices({ deliveryLinks }) {
         backgroundColor: "tan",
         width: "100%",
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "space-evenly",
       }}
     >
       <img
         src={GoJekLogo}
         alt="GoJek"
-        style={{ height: "130px", width: "200px", margin: "50px" }}
+        style={{ height: "130px", width: "200px", margin: "50px auto" }}
         onClick={() => handleClickLink(deliveryLinks.GoJekLink)}
       />
       <img
         src={GrabLogo}
         alt="Grab"
-        style={{ height: "130px", width: "200px", margin: "50px" }}
+        style={{ height: "130px", width: "200px", margin: "50px auto" }}
         onClick={() => handleClickLink(deliveryLinks.GrabLink)}
       />
     </div>
