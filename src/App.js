@@ -6,10 +6,10 @@ import MenuCarousel from "./menuCarousel";
 import DeliveryServices from "./deliveryServices.jsx";
 import LocationDetails from "./locationDetails.jsx";
 
-const beachBermDeliveryLinks = {
-  GoJekLink: "https://www.gojek.com/en-id/",
-  GrabLink: "https://codepen.io/features/",
-};
+// const beachBermDeliveryLinks = {
+//   GoJekLink: "https://www.gojek.com/en-id/",
+//   GrabLink: "https://codepen.io/features/",
+// };
 const bistroDeliveryLinks = {
   GoJekLink: "https://nodejs.org/en/",
   GrabLink: "https://www.youtube.com/",
@@ -77,7 +77,8 @@ export default function App() {
   const handleClickHomeMenuBtn = (menuType) => {
     if (menuType === "beachBerm") {
       setMenuItems(beachBermMenus);
-      setDeliveryLinks(beachBermDeliveryLinks);
+      // setDeliveryLinks(beachBermDeliveryLinks);
+      setDeliveryLinks(null);
       setLocationDetails(beachBermDetails);
     } else if (menuType === "bistro") {
       setMenuItems(bistroMenus);
@@ -94,7 +95,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="appHeader">
-        <h1>707 Restaurant Group</h1>
+        <h1>707</h1>
 
         <div className="homeMenuBtnsCont">
           <div
@@ -104,7 +105,16 @@ export default function App() {
             }}
             onClick={() => handleClickHomeMenuBtn("beachBerm")}
           >
-            <div className="homeMenuBtnOverlay">Beach Berm</div>
+            <div className="homeMenuBtnOverlay">
+              707 Beach Berm
+              <p>
+                Located just a stone's throw away from the sparkling blue waters
+                of the ocean, this beachside restaurant and bar is the perfect
+                place to relax and unwind. With a prime location right on the
+                sandy shore, guests can enjoy stunning views of the ocean and
+                the sound of the waves crashing in the background.
+              </p>
+            </div>
           </div>
           <div
             className="homeMenuBtn"
@@ -113,7 +123,16 @@ export default function App() {
             }}
             onClick={() => handleClickHomeMenuBtn("bistro")}
           >
-            <div className="homeMenuBtnOverlay">Bistro</div>
+            <div className="homeMenuBtnOverlay">
+              707 Cafe & Bistro
+              <p>
+                Tucked away in the heart of Bali's lush rice fields, this
+                charming restaurant/bar offers a unique and unforgettable dining
+                experience. With a serene and tranquil atmosphere, guests can
+                enjoy the calming sight of endless green rice paddies stretching
+                out into the distance.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -124,6 +143,9 @@ export default function App() {
         />
       )}
       {deliveryLinks && <DeliveryServices deliveryLinks={deliveryLinks} />}
+      <div className="locationDetailsHeader">
+        <h1>FIND US</h1>
+      </div>
       {locationDetails && <LocationDetails locationDetails={locationDetails} />}
     </div>
   );
