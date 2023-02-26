@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #6d8e83;
+  background-color: #3b280d;
 }
 
 .cards-wrapper {
@@ -68,7 +68,7 @@
 }
 
 .card h1 {
-  color: white;
+  color: #e2ceb2;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
@@ -90,7 +90,7 @@
   position: relative;
   width: 70%;
   height: 70%;
-  background-color: #849e64;
+  background-color: #e2ceb2;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -110,10 +110,11 @@
   right: 0;
   width: 100px;
   height: 40px;
-  background-color: #f78c08;
-  color: #3b280d;
+  font-family: "Tilt Neon", cursive;
+  background-color: #3b280d;
+  color: #e2ceb2;
   font-weight: bold;
-  border: none;
+  border: 5px solid;
   border-bottom-left-radius: 25px;
   outline: none;
   cursor: pointer;
