@@ -144,9 +144,7 @@ export default function App() {
         />
       )}
       {deliveryLinks && <DeliveryServices deliveryLinks={deliveryLinks} />}
-      <div className="locationDetailsHeader">
-        <h1>FIND US</h1>
-      </div>
+
       {locationDetails && <LocationDetails locationDetails={locationDetails} />}
       <div className="credits">
         <p>
