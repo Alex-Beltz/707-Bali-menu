@@ -6,6 +6,11 @@ export default function LocationDetails({ locationDetails }) {
   return (
     <div className="locationDetailsCont">
       <div className="locationMapCont">
+        <p className="directionsLink">
+          <a href={`${locationDetails.directionsLink}`} target="_blank">
+            Get Directions
+          </a>
+        </p>
         <a href={locationDetails.GMapsLink}>
           <iframe
             title="location-map"
