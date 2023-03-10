@@ -11,6 +11,10 @@ body {
   text-align: center;
 }
 
+.no-select {
+  user-select: none;
+}
+
 .appHeader {
   display: flex;
   flex-direction: column;
@@ -93,7 +97,6 @@ body {
 .deliveryServicesLink {
   height: 80px;
   width: 120px;
-  /* margin: 50px auto; */
   cursor: pointer;
 }
 
@@ -122,6 +125,24 @@ body {
 .locationMapCont {
   height: 350px;
   width: 400px;
+}
+
+.directionsLink {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.directionsLink a {
+  background-color: #e2ceb2;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  color: #3b280d;
+}
+
+.directionsLink a:hover {
+  opacity: 0.75;
 }
 
 .locationMapCont a {
@@ -178,13 +199,36 @@ body {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   .homeMenuBtn {
     width: 350px;
   }
 
+  .homeMenuBtnOverlay p {
+    font-size: 14px;
+    width: 85%;
+  }
+
+  .cards-wrapper {
+    gap: 50px;
+  }
+
   .locationDetailsCont {
     flex-direction: column;
+    border: 60px solid #e2ceb2;
+  }
+
+  .locationDetailsHeader h1 {
+    margin-bottom: -55px;
+    font-size: 40px;
+  }
+  .directionsLink {
+    padding-bottom: 40px;
+  }
+
+  .directionsLink a {
+    font-size: 1.75rem;
+    padding: 20px;
   }
 
   .locationMapCont {
@@ -193,12 +237,25 @@ body {
     margin-bottom: 50px;
   }
 
-  /* .locationDetailsContact {
-    flex-direction: column;
-  } */
-
   .locationDetailsAddress h3 {
+    margin-top: 3.5rem;
     width: 95%;
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .locationDetailsCont {
+    border-left: 35px solid #e2ceb2;
+    border-right: 35px solid #e2ceb2;
+  }
+  .locationMapCont {
+    height: 250px;
+    width: 250px;
+    margin-bottom: 50px;
+  }
+
+  .locationDetailsAddress h3 {
+    font-size: 1.25rem;
   }
 }
