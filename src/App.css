@@ -1,5 +1,11 @@
+html {
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: "Tilt Neon", cursive;
+  margin: 0;
+  padding: 0;
 }
 
 */ .App {
@@ -9,6 +15,8 @@ body {
   align-items: center;
   background-color: #3b280d;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .no-select {
@@ -92,6 +100,7 @@ body {
   background-color: #3b280d;
   display: flex;
   justify-content: center;
+  padding-bottom: 50px;
 }
 
 .deliveryServicesLink {
