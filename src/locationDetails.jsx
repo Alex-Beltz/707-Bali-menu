@@ -5,9 +5,16 @@ import InstagramLogo from "./logos/Instagram-logo.png";
 export default function LocationDetails({ locationDetails }) {
   return (
     <div className="locationDetailsCont">
+      {/* <div className="locationDetailsHeader">
+        <h1>FIND US</h1>
+      </div> */}
       <div className="locationMapCont">
         <p className="directionsLink">
-          <a href={`${locationDetails.directionsLink}`} target="_blank">
+          <a
+            href={`${locationDetails.directionsLink}`}
+            target="_blank"
+            rel="noreferrer"
+          >
             Get Directions
           </a>
         </p>
