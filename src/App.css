@@ -199,6 +199,25 @@ body {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+.credits {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #3b280d;
+  color: #e2ceb2;
+}
+
+.credits a {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #e2ceb2;
+}
+
+.credits a:hover {
+  opacity: 0.5;
+}
+
 @media (max-width: 1200px) {
   .homeMenuBtn {
     width: 350px;
