@@ -148,6 +148,23 @@ export default function App() {
         <h1>FIND US</h1>
       </div>
       {locationDetails && <LocationDetails locationDetails={locationDetails} />}
+      <div className="credits">
+        <p>
+          Managed by{" "}
+          <a href="https://www.chrishera.com/" target="_blank" rel="noreferrer">
+            Chrishera Consulting
+          </a>
+          . Website by{" "}
+          <a
+            href="https://www.alex.beltz.world/#"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Alex Beltz
+          </a>
+          .
+        </p>
+      </div>
     </div>
   );
 }
