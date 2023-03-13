@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
-import BistroImg from "./bistroImages/BistroRestoImg.jpg";
-import BeachBermImg from "./beachBermImages/BeachBermResto.jpg";
+import BistroImg from "./restaurants/BistroRestoImg.jpg";
+import BeachBermImg from "./restaurants/BeachBermResto.jpg";
 import MenuCarousel from "./menuCarousel";
 import DeliveryServices from "./deliveryServices.jsx";
 import LocationDetails from "./locationDetails.jsx";
@@ -14,7 +14,6 @@ const bistroDeliveryLinks = {
   GoJekLink: "https://nodejs.org/en/",
   GrabLink: "https://www.youtube.com/",
 };
-
 const beachBermMenus = [
   {
     name: "Indonesian",
@@ -33,7 +32,6 @@ const beachBermMenus = [
     menuImg: require("./Menus/beachBermBites.jpg"),
   },
 ];
-
 const bistroMenus = [
   {
     name: "Indonesian",
@@ -52,7 +50,6 @@ const bistroMenus = [
     menuImg: require("./Menus/bistroBites.jpg"),
   },
 ];
-
 const beachBermDetails = {
   GMapsLink: `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5295.334477292176!2d115.14284784187342!3d-8.675391769120335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd24774c1be601d%3A0x80cb4addb8f72ac1!2s707%20Beachberm!5e0!3m2!1sen!2ssg!4v1677310399499!5m2!1sen!2ssg&q=Current+Location" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade`,
   directionsLink: `https://goo.gl/maps/hmJnVsNBzqLypjHV8`,
@@ -152,7 +149,9 @@ export default function App() {
           <a href="https://www.chrishera.com/" target="_blank" rel="noreferrer">
             Chrishera Consulting
           </a>
-          . Website by{" "}
+        </p>
+        <p>
+          Website by{" "}
           <a
             href="https://www.alex.beltz.world/#"
             target="_blank"
@@ -160,7 +159,6 @@ export default function App() {
           >
             Alex Beltz
           </a>
-          .
         </p>
       </div>
     </div>
