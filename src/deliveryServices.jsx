@@ -8,7 +8,7 @@ export default function DeliveryServices({ deliveryLinks }) {
   };
 
   return (
-    <div className="deliveryServicesCont">
+    <div className="deliveryServicesCont fullWidth">
       <img
         className="deliveryServicesLink"
         src={GoJekLogo}
