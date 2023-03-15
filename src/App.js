@@ -91,19 +91,19 @@ export default function App() {
   };
 
   return (
-    <div className="App  no-select">
-      <div className="appHeader">
+    <div className="App  no-select fullWidth">
+      <div className="appHeader fullWidth">
         <h1>707</h1>
 
         <div className="homeMenuBtnsCont">
           <div
-            className="homeMenuBtn"
+            className="homeMenuBtn shadow"
             style={{
               backgroundImage: `url(${BeachBermImg})`,
             }}
             onClick={() => handleClickHomeMenuBtn("beachBerm")}
           >
-            <div className="homeMenuBtnOverlay">
+            <div className="homeMenuBtnOverlay shadow">
               707 Beach Berm
               <p>
                 Located just a stone's throw away from the sparkling blue waters
@@ -115,13 +115,13 @@ export default function App() {
             </div>
           </div>
           <div
-            className="homeMenuBtn"
+            className="homeMenuBtn shadow"
             style={{
               backgroundImage: `url(${BistroImg})`,
             }}
             onClick={() => handleClickHomeMenuBtn("bistro")}
           >
-            <div className="homeMenuBtnOverlay">
+            <div className="homeMenuBtnOverlay shadow">
               707 Cafe & Bistro
               <p>
                 Tucked away in the heart of Bali's lush rice fields, this
