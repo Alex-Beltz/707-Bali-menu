@@ -4,7 +4,7 @@ import InstagramLogo from "./logos/Instagram-logo.png";
 
 export default function LocationDetails({ locationDetails }) {
   return (
-    <div>
+    <div className="fullWidth">
       <div className="locationDetailsHeader">
         <h1>FIND US</h1>
       </div>
@@ -12,6 +12,7 @@ export default function LocationDetails({ locationDetails }) {
         <div className="locationMapCont">
           <p className="directionsLink">
             <a
+              className=" shadow"
               href={`${locationDetails.directionsLink}`}
               target="_blank"
               rel="noreferrer"
@@ -21,6 +22,7 @@ export default function LocationDetails({ locationDetails }) {
           </p>
           <a href={locationDetails.GMapsLink}>
             <iframe
+              className=" shadow"
               title="location-map"
               src={`${locationDetails.GMapsLink}`}
             ></iframe>
