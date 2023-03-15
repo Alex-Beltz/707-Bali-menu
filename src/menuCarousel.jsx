@@ -14,7 +14,7 @@ export default function MenuCarousel({ menuItems, handleMenuItemClick }) {
   };
 
   return (
-    <div className="carousel">
+    <div className="carousel fullWidth">
       <div className="cards-wrapper">
         {menuItems.map((menuItem, index) => (
           <div
@@ -23,10 +23,10 @@ export default function MenuCarousel({ menuItems, handleMenuItemClick }) {
             onClick={() => handleClick(index)}
           >
             <div
-              className="card-image"
+              className="card-image shadow"
               style={{ backgroundImage: `url(${menuItem.menuImg})` }}
             >
-              <div className="card-overlay">
+              <div className="card-overlay shadow">
                 <h1>{menuItem.name}</h1>
               </div>
             </div>
